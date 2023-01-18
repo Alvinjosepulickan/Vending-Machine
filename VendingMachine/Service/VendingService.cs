@@ -17,9 +17,34 @@ namespace VendingMachine.Service
             account = new Account();
             productList = new Product();
         }
-        public void AddCoinstoAccount(string coin)
+        public void AddCoinstoAccount()
         {
+            bool addCoinsToAccount;
+            do
+            {
 
+                Console.WriteLine();
+                foreach (int i in Enum.GetValues(typeof(ValidCoins)))
+                {
+                    Console.WriteLine($" {i}");
+                }
+                string selectedCoin = Console.ReadLine();
+                ValidCoins coin;
+                Enum.TryParse<ValidCoins>(selectedCoin, out coin);
+                if (CheckIfCoinIsValid(coin))
+                {
+                    Console.WriteLine(@"Add more coins to account?
+                                        Y\y to add more coin.
+                                        Any other key to exit");
+                    string wantToContinue = Console.ReadLine();
+                    addCoinsToAccount =wantToContinue.ToUpper().Equals("Y") ?  true : false;
+                }
+                else
+                {
+                    Console.WriteLine("Please insert a valid coin");
+                    addCoinsToAccount = true;
+                }
+            } while (addCoinsToAccount);
         }
         public void SelectProduct(string productSelected)
         {
