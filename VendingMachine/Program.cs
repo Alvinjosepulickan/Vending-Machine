@@ -1,4 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to Wending Machine");
+using VendingMachine.Service;
 
-Console.WriteLine("Welccome to Wending Machine");
+Console.WriteLine("Welcome");
+IVendingService vendingService = new VendingService();
+bool start = true;
+do
+{
+
+} while (start);
+Console.WriteLine("Thanks For Coming");
