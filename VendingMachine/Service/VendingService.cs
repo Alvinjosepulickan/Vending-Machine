@@ -10,8 +10,8 @@ namespace VendingMachine.Service
 {
     public class VendingService: IVendingService
     {
-        private Account account;
-        private Product productList;
+        public Account account;
+        public Product productList;
         public VendingService()
         {
             account = new Account();
@@ -45,7 +45,7 @@ namespace VendingMachine.Service
                 }
             } while (addCoinsToAccount);
         }
-        private void DisplayValidCoins()
+        public void DisplayValidCoins()
         {
             Console.WriteLine("------------------------------Valid coins-------------------------");
             foreach (var coin in Enum.GetValues(typeof(ValidCoins)))
@@ -112,7 +112,7 @@ namespace VendingMachine.Service
                 else return;
             }
         }
-        private bool CheckIfCoinIsValid(ValidCoins coin)
+        public bool CheckIfCoinIsValid(ValidCoins coin)
         {
             switch (coin)
             {
@@ -133,7 +133,7 @@ namespace VendingMachine.Service
             }
             return true;
         }
-        private bool CheckIfUserHasSufficientBalance(string productSelected)
+        public bool CheckIfUserHasSufficientBalance(string productSelected)
         {
             if (productList.ProductsAvailable[productSelected] <= account.Balance)
             {
