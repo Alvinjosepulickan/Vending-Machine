@@ -9,12 +9,12 @@ namespace VendingMachine.Models
     public class Account
     {
 
-        public double Balance { get; set; }
-        //public double Change { get; set; }
+        public decimal Balance { get; set; }
+        public decimal Return { get; set; }
         public Account()
         {
             Balance = 0;
-            //Change = 0;
+            Return = 0;
         }
     }
 }

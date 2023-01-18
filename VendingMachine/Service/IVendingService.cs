@@ -11,5 +11,6 @@ namespace VendingMachine.Service
     {
         void AddCoinstoAccount();
         void Menu();
+        void DisplayBalance();
     }
 }
