@@ -10,6 +10,6 @@ namespace VendingMachine.Service
     public interface IVendingService
     {
         void AddCoinstoAccount();
-        void SelectProduct(string productSelected);
+        void Menu();
     }
 }

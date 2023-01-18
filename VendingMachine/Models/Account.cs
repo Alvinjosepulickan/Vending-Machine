@@ -10,11 +10,11 @@ namespace VendingMachine.Models
     {
 
         public double Balance { get; set; }
-        public double Change { get; set; }
+        //public double Change { get; set; }
         public Account()
         {
             Balance = 0;
-            Change = 0;
+            //Change = 0;
         }
     }
 }

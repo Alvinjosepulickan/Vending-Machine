@@ -8,5 +8,6 @@ bool start = true;
 do
 {
     vendingService.AddCoinstoAccount();
+    vendingService.Menu();
 } while (start);
 Console.WriteLine("Thanks For Coming");
